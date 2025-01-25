@@ -3,25 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
-    <link rel="stylesheet" href="./style.css" />
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css" />
   <script defer src="bundle.js"></script></head>
   <body>
     <div id="app">
-      <h1>Weather Forecast</h1>
-      <form id="locationForm">
-        <input
-          type="text"
-          id="locationInput"
-          placeholder="Enter a location"
-          required
-        />
-        <button type="submit">Get Weather</button>
-      </form>
-      <div id="loading" style="display: none">Loading...</div>
-      <div id="weatherDisplay"></div>
-      <button id="toggleUnit" style="display: none">Switch to °C</button>
+      <header>
+        <h1>Weather Forecast</h1>
+        <form id="search-form">
+          <input
+            type="text"
+            id="location-input"
+            placeholder="Enter a location"
+            required
+          />
+          <button type="submit">Search</button>
+        </form>
+      </header>
+      <main>
+        <div id="weather-container">
+          <!-- Weather data will be dynamically injected here -->
+        </div>
+      </main>
+      <footer>
+        <p>Powered by Visual Crossing API</p>
+      </footer>
     </div>
-    <script src="bundle.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
